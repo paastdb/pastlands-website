@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Home</title>
+    <style>
+        body {
+            background: #FAF9F6;
+            margin: 0;
+            overflow: hidden;
+        }
+
+
+        #loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <video id="loaderVideo" autoplay muted playsinline width="200" height="50">
+            <source src="pageloader.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <script>
+        const video = document.getElementById('loaderVideo');
+       
+        video.addEventListener('ended', () => {
+            window.location.href = './home';
+        });
+
+
+        video.addEventListener('play', () => {
+            video.currentTime = 0;
+        });
+    </script>
+</body>
+</html>
