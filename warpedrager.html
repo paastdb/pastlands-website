@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/warpedrager.css">
+        <title>warpedrager</title>
+       
+    </head>
+
+    <body>
+
+        <!-- Page Loader -->
+        <div id="loader">
+            <video autoplay muted playsinline id="loader-video">
+                <source src="warpedrager page loader.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <a href="./warpedrager-about">about</a>
+        <br />
+        <a href="./warpedrager-mywork">my work</a>
+
+        <script>
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
+            const video = document.getElementById('loader-video');
+
+            // When the video finishes playing, fade out loader
+            video.addEventListener('ended', () => {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.style.display = 'none';
+                content.style.display = 'block';
+                }, 1000); // Matches fade-out transition time
+            });
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,47 @@
+@view-transition {
+    navigation: auto;
+  }
+  
+  @keyframes fade-in{
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out{
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+
+body{
+    background-color: #FAF9F6;
+}
+
+a{
+    margin: 0 auto;
+    top: 45%;
+    left: 39%;
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 15px;
+    position: relative;
+    color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+.return a {
+    left: 0%;
+    font-size: 14px;
+}

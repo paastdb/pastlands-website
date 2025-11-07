@@ -1,0 +1,87 @@
+@view-transition {
+    navigation: auto;
+  }
+  
+  @keyframes fade-in{
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out{
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+
+body{
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #FAF9F6;
+}
+
+a{
+    margin: 0 auto;
+    top: 45%;
+    left: 47%;
+    text-align: center;
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 15px;
+    position: relative;
+    color: black;
+}
+
+/* Fade in */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #1C1C1C;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+a:hover::after,
+a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+/* Loader covers the entire screen */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FAF9F6; /* fallback background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Video fills the screen */
+#loader-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Smooth fade out */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
