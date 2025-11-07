@@ -29,72 +29,12 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* container wraps the image and determines hover area */
-.container {
-  position: absolute;
-  top: 43%;
-  left: 40%;
-  transform: translate(-50%, -50%); /* optional: centers based on its own size */
-  cursor: pointer;
-}
-
-/* base image — no absolute positioning tied to the page */
-.base-img {
-  display: block;
-  width: 200px;     /* pick a concrete size (or use % relative to a parent) */
-  height: auto;
-}
-
-/* overlay matches the container exactly */
-.fade-element {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.35s ease-in-out, visibility 0.35s;
-  z-index: 2;
-  pointer-events: none; /* prevents overlay from blocking hover on container */
-}
-
-/* GIF fills the overlay */
-.hover-gif {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover; /* or contain if you prefer */
-}
-
-/* only when the cursor is over the .container (i.e. the image) */
-.container:hover .fade-element {
-  opacity: 1;
-  visibility: visible;
-}
-
-h1{
-    font-family: Helvetica;
-    position: absolute;
-    left: 50%;
-    top: 35%;
-}
-
 p{
   font-family: Helvetica;
+  font-size: 15px;
   position: absolute;
-  left: 50%;
+  left: 38%;
   top: 40%;  
-}
-
-.img-link {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.img-link:focus,
-.img-link:active {
-  outline: none;
 }
 
 li {
