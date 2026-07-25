@@ -1,49 +1,101 @@
 @view-transition {
-    navigation: auto;
-  }
-  
-  @keyframes fade-in{
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
+  navigation: auto; 
+}
 
-  body {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
+}
+
+* {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background: #FAF9F6;
+    box-sizing: border-box;
+}
+
+/* Page */
+
+html,
+body {
+    width: 100%;
     height: 100%;
-  }
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    color: white;
+}
 
-  p {
-    animation: fade-in 1.0s;
-  }
+/* Background Video */
 
-  .navigation {
+.background-video {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -2;
+}
+/* Center Content */
+
+.content {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    list-style-type: none;
-    background-color: #FAF9F6;
-    animation: fade-in 1.0s;
-  }
-  
-  .navigation a {
-    display: block;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    text-align: center;
+
+    gap: 20px;
+}
+
+.content h1 {
+    font-size: clamp(4rem, 15vw, 18rem);
+    letter-spacing: -0.20em;
+    color: black;
+    filter: blur(clamp(2px, 0.3vw, 5px));
+}
+
+.content p {
+    font-size: clamp(1.5rem, 4vw, 4.5rem);
+    letter-spacing: -0.15em;
+    color: black;
+    filter: blur(clamp(1px, 0.2vw, 3px));
+}
+
+.back-button {
+    position: fixed;
+    bottom: clamp(20px, 4vw, 40px);
+    right: clamp(20px, 4vw, 40px);
+
     color: black;
     text-decoration: none;
-  }
-  
-  .navigation a:hover {
-    animation: fade-out 1.0s;
-  }
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: bold;
+    letter-spacing: -0.15em;
+    filter: blur(clamp(1px, 0.2vw, 1px));
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    opacity: 0.7;
+    transform: translateX(-5px);
+}
+
+#grain {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 9999;
+}

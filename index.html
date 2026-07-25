@@ -4,35 +4,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Home</title>
-    <style>
-        body {
-            background: #FAF9F6;
-            margin: 0;
-            overflow: hidden;
-        }
 
-
-        #loader {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-
-        video {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="css\home.css">
+    <meta name="view-transition" content="same-origin">
 </head>
 <body>
     <div id="loader">
-        <video id="loaderVideo" autoplay muted playsinline width="200" height="50">
-            <source src="pageloader.webm" type="video/webm">
+        <video id="loaderVideo" autoplay muted playsinline>
+            <source src="pageintro.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
     </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://unpkg.com/three@0.179.1/build/three.module.js"
+            }
+        }   
+    </script>
+
+    <canvas id="grain"></canvas>
+
+    <script type="module" src="javascript\grain.js"></script>
 
 
     <script>
@@ -47,5 +41,6 @@
             video.currentTime = 0;
         });
     </script>
+
 </body>
 </html>
