@@ -46,7 +46,7 @@ body{
 }
 
 #loader video {
-    width: clamp(280px, 90vw, 600px);
+    width: clamp(280px, 90vw, 500px);
     height: auto;
     display: block;
 }
