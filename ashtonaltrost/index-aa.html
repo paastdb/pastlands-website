@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>HOME</title>
+
+    <link rel="stylesheet" href="css\home.css">
+    <meta name="view-transition" content="same-origin">
+</head>
+<body>
+
+    <div class="crt">
+        <div id="loader">
+            <video id="loaderVideo" autoplay muted playsinline>
+                <source src="pageintro_1.mov" type="video/quicktime">
+                <source src="pageintro_1.webm" type="video/webm">
+                Your browser does not support transparent videos.
+            </video>
+        </div>
+    </div>
+
+
+    <script>
+        const video = document.getElementById('loaderVideo');
+       
+        video.addEventListener('ended', () => {
+            window.location.href = './home';
+        });
+
+
+        video.addEventListener('play', () => {
+            video.currentTime = 0;
+        });
+    </script>
+
+</body>
+</html>
