@@ -29,7 +29,7 @@ const translations = {
         about: "ABOUT",
         mywork: "MY WORK",
         language: "LANGUAGE:",
-        about1: "I am a creative director who specializes in",
+        about1: "I am a creative who specializes in",
         about2: "video editing, digital design, web development,",
         about3: "and programming."
     },
@@ -46,7 +46,7 @@ const translations = {
         about: "SOBRE MÍ",
         mywork: "MI TRABAJO",
         language: "IDIOMA:",
-        about1: "Soy un director creativo especializado en",
+        about1: "Soy un creativo especializado en",
         about2: "edición de video, diseño digital, desarrollo web,",
         about3: "y programación."
     },
@@ -63,7 +63,7 @@ const translations = {
         about: "À PROPOS",
         mywork: "MES PROJETS",
         language: "LANGUE :",
-        about1: "Je suis un directeur créatif spécialisé dans",
+        about1: "Je suis un créatif spécialisé dans",
         about2: "le montage vidéo, le design numérique, le développement web,",
         about3: "et la programmation."
     },
