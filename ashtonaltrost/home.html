@@ -3,50 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>HOME</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Home</title>
 
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css\home.css">
     <meta name="view-transition" content="same-origin">
 </head>
 <body>
 
     <div class="crt">
-        <div id="screen">
-            <div class="vcr-menu">
-
-            <ul id="menuList">
-                <li class="selected" data-link="./about" data-i18n="about">
-                    ABOUT
-                </li>
-
-                <li data-link="./mywork" data-i18n="mywork">
-                    MY WORK
-                </li>
-
-                <li id="languageItem"> 
-                    <span data-i18n="language">LANGUAGE:</span>
-                    <span id="language">ENGLISH</span>
-                </li>
-            </ul>
-
-            <div class="controls">
-                <div data-i18n="controlSelect">
-                    SELECT : ▲ ▼ ▶ KEY
-                </div>
-
-                <div data-i18n="controlSet">
-                    SET&nbsp;&nbsp;&nbsp;&nbsp;: ENTER KEY
-                </div>
-
-                <div data-i18n="controlEnd">
-                    END&nbsp;&nbsp;&nbsp;&nbsp;: ESCAPE KEY
-                </div>
+        <div id="loader">
+            <div class="center-container">
+                <img class="shrink-img" src="demon.gif" alt="Headshot">
+  
+            <div class="text-content">
+                <h3>ashtonaltrost</h3>
+                <p>creative</p>
             </div>
+
+            <div class="socials">
+                    <a href="https://www.youtube.com/@ashtonaltrost" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <img class="shrinklogo-img" src="youtube.png" alt="YouTube">
+                    </a>
+
+                    <a href="https://www.instagram.com/ashtonaltrost/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img class="shrinklogo-img" src="instagram.png" alt="Instagram">
+                    </a>
+
+                    <a href="https://x.com/ashtonaltrost" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                        <img class="shrinklogo-img" src="twitter.png" alt="X (Twitter)">
+                    </a>
+            </div>
+
+            
+            <section class="portfolio" id="portfolio">
+
+                <!-- PAGE 1 -->
+                <div class="project-page active" data-page="1">
+                    <div class="video-grid">
+
+                        <!-- PROJECT 1 -->
+                        <a class="project-card" href="https://youtu.be/1vHz2fkbHJs?si=79nl5uPLcrN1uqLx" target="_blank" rel="noopener noreferrer">
+                            <div class="video-container">
+                                <video
+                                    poster="BLESSINGSMV.gif"
+                                    muted
+                                    playsinline
+                                    preload="metadata">
+                                </video>
+                                <span class="project-number">01</span>
+                            </div>
+                            <h3>RaqGambino! - Blessings (MV)</h3>
+                            <p>Edited by me</p>
+                        </a>
+
+                        <!-- PROJECT 2 -->
+                        <a class="project-card" href="https://youtu.be/p-UjAqYnqbE?si=hc6334fvx9MI4RmQ" target="_blank" rel="noopener noreferrer">
+                            <div class="video-container">
+                                <video
+                                    poster="GEEKERMV.gif"
+                                    muted
+                                    playsinline
+                                    preload="metadata">
+                                </video>
+                                <span class="project-number">02</span>
+                            </div>
+                            <h3>GEEKERS - luredd (MV)</h3>
+                            <p>Edited by me</p>
+                        </a>
+
+                        <!-- EMPTY PROJECT SLOTS -->
+                        <div class="project-card empty-slot"></div>
+                        <div class="project-card empty-slot"></div>
+                        <div class="project-card empty-slot"></div>
+                        <div class="project-card empty-slot"></div>
+                        <div class="project-card empty-slot"></div>
+                        <div class="project-card empty-slot"></div>
+                        <div class="project-card empty-slot"></div>
+
+                    </div>
+                </div>
+
+                <!-- PAGE 2 -->
+                <div class="project-page" data-page="2">
+                    <div class="empty-page">
+                        <p>Nothing here yet.</p>
+                    </div>
+                </div>
+
+                <!-- PAGINATION -->
+                <nav class="pagination" aria-label="Portfolio pages">
+                    <button class="page-btn" id="prevPage" disabled>
+                        &lt;
+                    </button>
+
+                    <button class="page-btn active" data-target="1">01</button>
+                    <button class="page-btn" data-target="2">02</button>
+
+                    <button class="page-btn" id="nextPage">
+                        &gt;
+                    </button>
+                </nav>
+            </section>
+
         </div>
     </div>
 
-    <script src="javascript/arrow.js"></script>
+    <script src="portfolio.js"></script>
 
 </body>
 </html>
